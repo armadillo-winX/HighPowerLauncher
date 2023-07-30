@@ -6,6 +6,10 @@
     <StartupObject>HighPowerLauncher.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
+    <Version>0.1.0</Version>
+    <Authors>Mashiro Tamane</Authors>
+    <Product>High Power Launcher</Product>
+    <Copyright>Copyright © $(Authors) 2023</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

@@ -16,4 +16,8 @@
         MessageBox.Show(Me, versionInfo, "バージョン情報",
                         MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
+
+    Private Sub NotifyIcon1_Click(sender As Object, e As EventArgs) Handles NotifyIcon1.Click
+        Me.Activate()
+    End Sub
 End Class

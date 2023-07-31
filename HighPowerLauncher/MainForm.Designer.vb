@@ -26,7 +26,22 @@ Partial Class MainForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.LauncherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ItemMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddItemMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RemoveItemMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.WindowsToolsMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaunchPowershellMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaunchExplorerMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaunchRegeditMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LaunchTaskmgrMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShutDownMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AddStartupMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.ExitToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViewMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReloadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
@@ -40,8 +55,7 @@ Partial Class MainForm
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ReloadItemButton = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.OpenSpecialDirectoryButton = New System.Windows.Forms.ToolStripSplitButton()
-        Me.ViewMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShutDownButton = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -57,17 +71,107 @@ Partial Class MainForm
         '
         'LauncherToolStripMenuItem
         '
-        Me.LauncherToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitToolStripMenuItem})
+        Me.LauncherToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ItemMenuItem, Me.ToolStripSeparator5, Me.WindowsToolsMenuItem, Me.ShutDownMenuItem, Me.ToolStripSeparator6, Me.AddStartupMenuItem, Me.ToolStripSeparator4, Me.ExitToolStripMenuItem})
         Me.LauncherToolStripMenuItem.Name = "LauncherToolStripMenuItem"
         Me.LauncherToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
         Me.LauncherToolStripMenuItem.Text = "ランチャー(&L)"
+        '
+        'ItemMenuItem
+        '
+        Me.ItemMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddItemMenuItem, Me.RemoveItemMenuItem})
+        Me.ItemMenuItem.Name = "ItemMenuItem"
+        Me.ItemMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.ItemMenuItem.Text = "アイテム(&I)"
+        '
+        'AddItemMenuItem
+        '
+        Me.AddItemMenuItem.Name = "AddItemMenuItem"
+        Me.AddItemMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.AddItemMenuItem.Text = "追加(&A)"
+        '
+        'RemoveItemMenuItem
+        '
+        Me.RemoveItemMenuItem.Name = "RemoveItemMenuItem"
+        Me.RemoveItemMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.RemoveItemMenuItem.Text = "削除(&R)"
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(199, 6)
+        '
+        'WindowsToolsMenuItem
+        '
+        Me.WindowsToolsMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaunchPowershellMenuItem, Me.LaunchExplorerMenuItem, Me.LaunchRegeditMenuItem, Me.LaunchTaskmgrMenuItem})
+        Me.WindowsToolsMenuItem.Name = "WindowsToolsMenuItem"
+        Me.WindowsToolsMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.WindowsToolsMenuItem.Text = "Windows ツール"
+        '
+        'LaunchPowershellMenuItem
+        '
+        Me.LaunchPowershellMenuItem.Name = "LaunchPowershellMenuItem"
+        Me.LaunchPowershellMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.LaunchPowershellMenuItem.Text = "Powershell"
+        '
+        'LaunchExplorerMenuItem
+        '
+        Me.LaunchExplorerMenuItem.Name = "LaunchExplorerMenuItem"
+        Me.LaunchExplorerMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.LaunchExplorerMenuItem.Text = "エクスプローラー"
+        '
+        'LaunchRegeditMenuItem
+        '
+        Me.LaunchRegeditMenuItem.Name = "LaunchRegeditMenuItem"
+        Me.LaunchRegeditMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.LaunchRegeditMenuItem.Text = "レジストリエディタ"
+        '
+        'LaunchTaskmgrMenuItem
+        '
+        Me.LaunchTaskmgrMenuItem.Name = "LaunchTaskmgrMenuItem"
+        Me.LaunchTaskmgrMenuItem.Size = New System.Drawing.Size(165, 22)
+        Me.LaunchTaskmgrMenuItem.Text = "タスクマネージャー"
+        '
+        'ShutDownMenuItem
+        '
+        Me.ShutDownMenuItem.Name = "ShutDownMenuItem"
+        Me.ShutDownMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.ShutDownMenuItem.Text = "Windows をシャットダウン"
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(199, 6)
+        '
+        'AddStartupMenuItem
+        '
+        Me.AddStartupMenuItem.Name = "AddStartupMenuItem"
+        Me.AddStartupMenuItem.Size = New System.Drawing.Size(202, 22)
+        Me.AddStartupMenuItem.Text = "スタートアップに登録"
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(199, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
         Me.ExitToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(202, 22)
         Me.ExitToolStripMenuItem.Text = "終了(&X)"
+        '
+        'ViewMenuItem
+        '
+        Me.ViewMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReloadToolStripMenuItem})
+        Me.ViewMenuItem.Name = "ViewMenuItem"
+        Me.ViewMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.ViewMenuItem.Text = "表示(&V)"
+        '
+        'ReloadToolStripMenuItem
+        '
+        Me.ReloadToolStripMenuItem.Name = "ReloadToolStripMenuItem"
+        Me.ReloadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ReloadToolStripMenuItem.Text = "再読み込み(&R)"
         '
         'HelpToolStripMenuItem
         '
@@ -79,7 +183,7 @@ Partial Class MainForm
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(166, 22)
         Me.AboutToolStripMenuItem.Text = "バージョン情報(&A)"
         '
         'NotifyIcon1
@@ -103,7 +207,7 @@ Partial Class MainForm
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaunchButton, Me.OpenLocaleButton, Me.ToolStripSeparator1, Me.AddItemButton, Me.RemoveItemButton, Me.ToolStripSeparator2, Me.ReloadItemButton, Me.ToolStripSeparator3, Me.OpenSpecialDirectoryButton})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LaunchButton, Me.OpenLocaleButton, Me.ToolStripSeparator1, Me.AddItemButton, Me.RemoveItemButton, Me.ToolStripSeparator2, Me.ReloadItemButton, Me.ToolStripSeparator3, Me.ShutDownButton})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(484, 25)
@@ -118,6 +222,7 @@ Partial Class MainForm
         Me.LaunchButton.Name = "LaunchButton"
         Me.LaunchButton.Size = New System.Drawing.Size(23, 22)
         Me.LaunchButton.Text = "ToolStripButton1"
+        Me.LaunchButton.ToolTipText = "アプリケーションを実行する"
         '
         'OpenLocaleButton
         '
@@ -127,6 +232,7 @@ Partial Class MainForm
         Me.OpenLocaleButton.Name = "OpenLocaleButton"
         Me.OpenLocaleButton.Size = New System.Drawing.Size(23, 22)
         Me.OpenLocaleButton.Text = "ToolStripButton2"
+        Me.OpenLocaleButton.ToolTipText = "実行ファイルの場所を開く"
         '
         'ToolStripSeparator1
         '
@@ -141,6 +247,7 @@ Partial Class MainForm
         Me.AddItemButton.Name = "AddItemButton"
         Me.AddItemButton.Size = New System.Drawing.Size(23, 22)
         Me.AddItemButton.Text = "ToolStripButton3"
+        Me.AddItemButton.ToolTipText = "アプリケーションをアイテムに追加"
         '
         'RemoveItemButton
         '
@@ -150,6 +257,7 @@ Partial Class MainForm
         Me.RemoveItemButton.Name = "RemoveItemButton"
         Me.RemoveItemButton.Size = New System.Drawing.Size(23, 22)
         Me.RemoveItemButton.Text = "ToolStripButton4"
+        Me.RemoveItemButton.ToolTipText = "アプリケーションをアイテムから削除"
         '
         'ToolStripSeparator2
         '
@@ -164,26 +272,22 @@ Partial Class MainForm
         Me.ReloadItemButton.Name = "ReloadItemButton"
         Me.ReloadItemButton.Size = New System.Drawing.Size(23, 22)
         Me.ReloadItemButton.Text = "ToolStripButton5"
+        Me.ReloadItemButton.ToolTipText = "再読み込みする"
         '
         'ToolStripSeparator3
         '
         Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
         Me.ToolStripSeparator3.Size = New System.Drawing.Size(6, 25)
         '
-        'OpenSpecialDirectoryButton
+        'ShutDownButton
         '
-        Me.OpenSpecialDirectoryButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.OpenSpecialDirectoryButton.Image = CType(resources.GetObject("OpenSpecialDirectoryButton.Image"), System.Drawing.Image)
-        Me.OpenSpecialDirectoryButton.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.OpenSpecialDirectoryButton.Name = "OpenSpecialDirectoryButton"
-        Me.OpenSpecialDirectoryButton.Size = New System.Drawing.Size(32, 22)
-        Me.OpenSpecialDirectoryButton.Text = "ToolStripButton6"
-        '
-        'ViewMenuItem
-        '
-        Me.ViewMenuItem.Name = "ViewMenuItem"
-        Me.ViewMenuItem.Size = New System.Drawing.Size(60, 20)
-        Me.ViewMenuItem.Text = "表示(&V)"
+        Me.ShutDownButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ShutDownButton.Image = CType(resources.GetObject("ShutDownButton.Image"), System.Drawing.Image)
+        Me.ShutDownButton.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ShutDownButton.Name = "ShutDownButton"
+        Me.ShutDownButton.Size = New System.Drawing.Size(23, 22)
+        Me.ShutDownButton.Text = "ToolStripButton6"
+        Me.ShutDownButton.ToolTipText = "Windows をシャットダウン"
         '
         'MainForm
         '
@@ -215,7 +319,6 @@ Partial Class MainForm
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NotifyIcon1 As NotifyIcon
-    Friend WithEvents ViewMenuItem As ToolStripMenuItem
     Friend WithEvents ApplicationListBox As ListBox
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents LaunchButton As ToolStripButton
@@ -226,5 +329,20 @@ Partial Class MainForm
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents ReloadItemButton As ToolStripButton
     Friend WithEvents ToolStripSeparator3 As ToolStripSeparator
-    Friend WithEvents OpenSpecialDirectoryButton As ToolStripSplitButton
+    Friend WithEvents ToolStripSeparator4 As ToolStripSeparator
+    Friend WithEvents ViewMenuItem As ToolStripMenuItem
+    Friend WithEvents ReloadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ItemMenuItem As ToolStripMenuItem
+    Friend WithEvents AddItemMenuItem As ToolStripMenuItem
+    Friend WithEvents RemoveItemMenuItem As ToolStripMenuItem
+    Friend WithEvents ShutDownButton As ToolStripButton
+    Friend WithEvents ToolStripSeparator5 As ToolStripSeparator
+    Friend WithEvents WindowsToolsMenuItem As ToolStripMenuItem
+    Friend WithEvents LaunchPowershellMenuItem As ToolStripMenuItem
+    Friend WithEvents LaunchExplorerMenuItem As ToolStripMenuItem
+    Friend WithEvents LaunchRegeditMenuItem As ToolStripMenuItem
+    Friend WithEvents LaunchTaskmgrMenuItem As ToolStripMenuItem
+    Friend WithEvents ShutDownMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator6 As ToolStripSeparator
+    Friend WithEvents AddStartupMenuItem As ToolStripMenuItem
 End Class

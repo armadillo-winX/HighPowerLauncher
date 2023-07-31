@@ -10,7 +10,12 @@
     <Authors>Mashiro Tamane</Authors>
     <Product>High Power Launcher</Product>
     <Copyright>Copyright © $(Authors) 2023</Copyright>
+    <ApplicationIcon>PLauncher-ico.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="PLauncher-ico.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />

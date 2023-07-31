@@ -94,6 +94,7 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ApplicationListBox.FormattingEnabled = True
+        Me.ApplicationListBox.HorizontalScrollbar = True
         Me.ApplicationListBox.ItemHeight = 15
         Me.ApplicationListBox.Location = New System.Drawing.Point(12, 52)
         Me.ApplicationListBox.Name = "ApplicationListBox"

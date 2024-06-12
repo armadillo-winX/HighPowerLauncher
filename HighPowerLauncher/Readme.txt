@@ -1,5 +1,5 @@
 ﻿--------------------------------------------------------------------
-Power Launcher ver0.1.*   Copyright © Mashiro Tamane
+High Power Launcher ver0.1.*   Copyright © Mashiro Tamane
 --------------------------------------------------------------------
 
 

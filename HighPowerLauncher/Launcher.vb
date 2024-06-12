@@ -6,7 +6,8 @@ Module Launcher
         Dim applicationPath As String = GetApplicationPath(applicationName)
         Dim applicationProcessStartInfo As ProcessStartInfo = New ProcessStartInfo With {
             .FileName = applicationPath,
-            .WorkingDirectory = Path.GetDirectoryName(applicationPath)
+            .WorkingDirectory = Path.GetDirectoryName(applicationPath),
+            .UseShellExecute = True
         }
         Process.Start(applicationProcessStartInfo)
     End Sub

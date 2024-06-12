@@ -11,6 +11,7 @@
     <Product>High Power Launcher</Product>
     <Copyright>Copyright © $(Authors) 2023</Copyright>
     <ApplicationIcon>PLauncher-ico.ico</ApplicationIcon>
+	  <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
   </PropertyGroup>
 
   <ItemGroup>

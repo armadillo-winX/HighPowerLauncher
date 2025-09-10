@@ -1,7 +1,7 @@
 ﻿Imports System.IO
 Imports System.Text
 
-Module Launcher
+Module ApplicationStarter
     Public Sub LaunchApplication(ByVal applicationName As String)
         Dim applicationPath As String = GetApplicationPath(applicationName)
         Dim applicationProcessStartInfo As ProcessStartInfo = New ProcessStartInfo With {

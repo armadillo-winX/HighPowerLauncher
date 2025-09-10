@@ -40,7 +40,7 @@ Public Class AddItemDialog
                     MessageBox.Show(Me, $"{NameBox.Text} はすでに登録済みです。", "アイテムの追加",
 MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 Else
-                    Launcher.AddApplicationCommand(NameBox.Text, PathBox.Text)
+                    ApplicationStarter.AddApplicationCommand(NameBox.Text, PathBox.Text)
                     Me.Close()
                 End If
             Catch ex As Exception

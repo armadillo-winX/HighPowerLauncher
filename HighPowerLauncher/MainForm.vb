@@ -12,7 +12,7 @@ Public Class MainForm
         If ApplicationListBox.SelectedIndex > -1 Then
             Dim applicationName As String = ApplicationListBox.SelectedItem
             Try
-                Launcher.LaunchApplication(applicationName)
+                ApplicationStarter.LaunchApplication(applicationName)
             Catch ex As Exception
                 MessageBox.Show(Me, $"アプリケーションの起動に失敗。{Environment.NewLine}{ex.Message}", "エラー",
 MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -24,7 +24,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error)
         If ApplicationListBox.SelectedIndex > -1 Then
             Dim applicationName As String = ApplicationListBox.SelectedItem
             Try
-                Launcher.OpenApplicationLocale(applicationName)
+                ApplicationStarter.OpenApplicationLocale(applicationName)
             Catch ex As Exception
                 MessageBox.Show(Me, ex.Message, "エラー",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -68,7 +68,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error)
                                     "アイテム '" + ApplicationListBox.SelectedItem + "' を削除しますか？", _appName,
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 Case DialogResult.Yes
-                    Launcher.DeleteApplicationCommand(ApplicationListBox.SelectedItem)
+                    ApplicationStarter.DeleteApplicationCommand(ApplicationListBox.SelectedItem)
                     GetApplicationItems()
             End Select
         End If
@@ -84,7 +84,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Error)
 
         If Directory.Exists(PathInfo.CommandDirectory) = False Then
             Try
-                Launcher.CreateCommandsDirectory()
+                ApplicationStarter.CreateCommandsDirectory()
             Catch ex As Exception
                 MessageBox.Show(Me, $"コマンド定義ファイル保存ディレクトリの生成に失敗。{Environment.NewLine}アプリケーションを終了します。", "エラー",
 MessageBoxButtons.OK, MessageBoxIcon.Error)

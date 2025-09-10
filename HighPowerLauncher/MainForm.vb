@@ -8,7 +8,7 @@ Public Class MainForm
     Private _systemDirectory As String = Environment.GetFolderPath(Environment.SpecialFolder.System)
     Private _userDirectory As String = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)
 
-    Private Sub Launch()
+    Private Sub StartApplication()
         If ApplicationListBox.SelectedIndex > -1 Then
             Dim applicationName As String = ApplicationListBox.SelectedItem
             Try
@@ -105,11 +105,11 @@ MessageBoxButtons.OK, MessageBoxIcon.Error)
     End Sub
 
     Private Sub LaunchButton_Click(sender As Object, e As EventArgs) Handles LaunchButton.Click
-        Launch()
+        StartApplication()
     End Sub
 
     Private Sub ApplicationListBox_DoubleClick(sender As Object, e As EventArgs) Handles ApplicationListBox.DoubleClick
-        Launch()
+        StartApplication()
     End Sub
 
     Private Sub OpenLocaleButton_Click(sender As Object, e As EventArgs) Handles OpenLocaleButton.Click

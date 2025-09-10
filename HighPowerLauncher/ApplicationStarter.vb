@@ -2,7 +2,7 @@
 Imports System.Text
 
 Module ApplicationStarter
-    Public Sub LaunchApplication(ByVal applicationName As String)
+    Public Sub Start(ByVal applicationName As String)
         Dim applicationPath As String = GetApplicationPath(applicationName)
         Dim applicationProcessStartInfo As ProcessStartInfo = New ProcessStartInfo With {
             .FileName = applicationPath,

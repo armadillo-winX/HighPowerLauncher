@@ -12,7 +12,7 @@ Public Class MainForm
         If ApplicationListBox.SelectedIndex > -1 Then
             Dim applicationName As String = ApplicationListBox.SelectedItem
             Try
-                ApplicationStarter.LaunchApplication(applicationName)
+                ApplicationStarter.Start(applicationName)
             Catch ex As Exception
                 MessageBox.Show(Me, $"アプリケーションの起動に失敗。{Environment.NewLine}{ex.Message}", "エラー",
 MessageBoxButtons.OK, MessageBoxIcon.Error)
